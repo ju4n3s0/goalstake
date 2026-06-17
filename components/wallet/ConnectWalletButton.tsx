@@ -1,12 +1,21 @@
-// src/components/wallet/ConnectWalletButton.tsx
+"use client";
 
-import { Wallet } from "lucide-react";
+import dynamic from "next/dynamic";
 
-export function ConnectWalletButton() {
-  return (
-    <button className="flex items-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-bold text-primary-foreground shadow-sm hover:bg-primary/90 transition-all active:scale-95">
-      <Wallet className="h-4 w-4" />
-      <span>Conectar</span>
-    </button>
-  );
-}
+export const ConnectWalletButton = dynamic(
+  () =>
+    import("./ConnectWalletButtonClient").then(
+      (mod) => mod.ConnectWalletButtonClient
+    ),
+  {
+    ssr: false,
+    loading: () => (
+      <button
+        disabled
+        className="rounded-xl bg-black px-4 py-2 text-sm font-semibold text-white opacity-50"
+      >
+        Conectar Wallet
+      </button>
+    ),
+  }
+);
