@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Challenge } from "@/interfaces/challenge";
+import type { Challenge } from "../../interfaces/challenge";
 import { Clock, Shield, Coins, ArrowRight } from "lucide-react";
 
 interface ChallengeCardProps {

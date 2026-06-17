@@ -2,9 +2,9 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Web3Provider } from "@/components/providers/Web3Provider";
+import { Navbar } from "../components/layout/Navbar";
+import { ThemeProvider } from "../components/theme-provider";
+import { Web3Provider } from "../components/providers/Web3Provider";
 
 export const metadata: Metadata = {
   title: "GoalStake",

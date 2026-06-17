@@ -1,6 +1,6 @@
 // src/data/challenges.ts
 
-import { Challenge } from "@/interfaces/challenge";
+import { type Challenge } from "../interfaces/challenge";
 
 export const challengeCatalog: Challenge[] = [
     {

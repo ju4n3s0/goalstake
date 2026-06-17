@@ -1,0 +1,9 @@
+{
+  "[project]/components/wallet/ConnectWalletButtonClient.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/wallet/ConnectWalletButtonClient.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/_0c092t8._.js",
+      "static/chunks/components_wallet_ConnectWalletButtonClient_tsx_1m8agw1._.js"
+    ]
+  }
+}

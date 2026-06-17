@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChallengeCard } from "@/components/challenges/ChallengeCard";
-import { challengeCatalog } from "@/data/challenges";
+import { ChallengeCard } from "../../components/challenges/ChallengeCard";
+import { challengeCatalog } from "../../data/challenges";
 import { Search, Filter } from "lucide-react";
 
 const container = {

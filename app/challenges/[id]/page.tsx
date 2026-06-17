@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { use } from "react";
 import { notFound } from "next/navigation";
-import { getChallengeById } from "@/data/challenges";
+import { getChallengeById } from "../../../data/challenges";
 import { motion } from "framer-motion";
 import { 
   ChevronLeft, 
