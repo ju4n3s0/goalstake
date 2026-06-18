@@ -11,6 +11,7 @@ import {
   Users,
   TrendingUp
 } from "lucide-react";
+import { ChallengeCounter } from "../components/contracts/ChallengeCounter";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -30,6 +31,9 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-gradient-hero">
       {/* Hero Section */}
+      <div className="mt-10">
+        <ChallengeCounter />
+      </div>
       <section className="mx-auto max-w-7xl px-4 pt-20 pb-16 sm:px-6 lg:px-8 lg:pt-32">
         <motion.div 
           initial="initial"

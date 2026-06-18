@@ -500,6 +500,10 @@
     margin-top: calc(var(--spacing) * 8);
   }
 
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -552,10 +556,6 @@
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-  }
-
-  .block {
-    display: block;
   }
 
   .flex {
