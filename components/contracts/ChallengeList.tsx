@@ -13,6 +13,7 @@ import {
   CHALLENGE_ESCROW_ADDRESS,
 } from "../../lib/contracts";
 import { celoSepolia } from "../../lib/wagmi";
+import Link from "next/link";
 
 function ChallengeItem({ id }: { id: bigint }) {
   const { address, isConnected } = useAccount();
@@ -51,6 +52,7 @@ function ChallengeItem({ id }: { id: bigint }) {
   const isOpen = Number(status) === 0;
   const isFinished = Number(status) === 1;
   const isPrizeClaimed = Number(status) === 2;
+  if (isPrizeClaimed) return null;
 
   const isWinner =
     Boolean(address) &&
@@ -120,6 +122,13 @@ function ChallengeItem({ id }: { id: bigint }) {
         </p>
         <p>Ganador: {String(winner)}</p>
       </div>
+
+        <Link
+        href={`/challenges/${id.toString()}`}
+        className="mt-4 inline-flex rounded-xl border px-4 py-2 text-sm font-semibold hover:bg-muted"
+        >
+        Ver detalle
+        </Link>
 
       {isOpen && (
         <button

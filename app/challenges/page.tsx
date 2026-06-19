@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ChallengeCard } from "../../components/challenges/ChallengeCard";
 import { challengeCatalog } from "../../data/challenges";
 import { Search, Filter } from "lucide-react";
+import { ChallengeList } from "../../components/contracts/ChallengeList";
 
 const container = {
   hidden: { opacity: 0 },
@@ -68,6 +69,19 @@ export default function ChallengesPage() {
             </motion.div>
           ))}
         </motion.section>
+
+        <section className="mt-16">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-foreground">
+              Retos activos en blockchain
+            </h2>
+            <p className="mt-2 text-muted-foreground">
+              Estos son los retos creados realmente en el contrato de GoalStake.
+            </p>
+          </div>
+
+          <ChallengeList />
+        </section>
         
         {challengeCatalog.length === 0 && (
           <div className="text-center py-20">
