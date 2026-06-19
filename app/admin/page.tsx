@@ -28,12 +28,12 @@ export default function AdminPage() {
     e.preventDefault();
 
     if (!isConnected || !address) {
-      alert("Primero conecta tu wallet");
+      console.log("Primero conecta tu wallet");
       return;
     }
 
     if (!challengeId || !winner) {
-      alert("Completa el ID del reto y la wallet ganadora");
+      console.log("Completa el ID del reto y la wallet ganadora");
       return;
     }
 
