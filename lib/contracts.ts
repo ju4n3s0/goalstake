@@ -1,5 +1,5 @@
 export const CHALLENGE_ESCROW_ADDRESS =
-  "0x88e7cdb0a4c3a6ac371a1f3ecdeeb3f883af756a" as const;
+  "0x94833f8031d7478b83f4173dc7a7e7b82a7c8174" as const;
 
 export const CHALLENGE_ESCROW_ABI = [
   {

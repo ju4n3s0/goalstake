@@ -99,11 +99,14 @@ contract ChallengeEscrow {
         require(msg.sender == challenge.winner, "Not winner");
         require(challenge.totalPool > 0, "Empty pool");
 
-        uint256 prize = (challenge.totalPool * (100 - platformFeePercent)) / 100;
+        uint256 fee = (challenge.totalPool * platformFeePercent) / 100;
+        uint256 prize = challenge.totalPool - fee;
+
         challenge.totalPool = 0;
         challenge.status = ChallengeStatus.PrizeClaimed;
 
         payable(msg.sender).transfer(prize);
+        payable(owner).transfer(fee);
 
         emit PrizeClaimed(_id, msg.sender, prize);
     }

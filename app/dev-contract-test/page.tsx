@@ -4,6 +4,9 @@ import { ChallengeCounter } from "../../components/contracts/ChallengeCounter";
 import { CreateChallengeButton } from "../../components/contracts/CreateChallengeButton";
 import { JoinChallengeButton } from "../../components/JoinChallengeButton";
 import { ChallengeStats } from "../../components/contracts/ChallengeStats";
+import { SelectWinnerButton } from "../../components/contracts/SelectWinnerButton";
+import { ClaimPrizeButton } from "../../components/contracts/ClaimPrizeButton";
+import { ChallengeList } from "../../components/contracts/ChallengeList";
 
 export default function DevContractTestPage() {
     return (
@@ -15,6 +18,9 @@ export default function DevContractTestPage() {
             <CreateChallengeButton />
             <JoinChallengeButton />
             <ChallengeStats />
+            <SelectWinnerButton />
+            <ClaimPrizeButton />
+            <ChallengeList />
         </div>
         </main>
     );

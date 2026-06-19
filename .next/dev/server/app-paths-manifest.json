@@ -1,3 +1,6 @@
 {
-  "/dev-contract-test/page": "app/dev-contract-test/page.js"
+  "/challenges/page": "app/challenges/page.js",
+  "/create-challenges/page": "app/create-challenges/page.js",
+  "/dev-contract-test/page": "app/dev-contract-test/page.js",
+  "/my-challenges/page": "app/my-challenges/page.js"
 }
