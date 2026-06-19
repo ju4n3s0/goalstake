@@ -57,4 +57,16 @@ export const CHALLENGE_ESCROW_ABI = [
     stateMutability: "payable",
     type: "function",
   },
+
+  {
+    inputs: [
+      { internalType: "uint256", name: "", type: "uint256" },
+      { internalType: "address", name: "", type: "address" },
+    ],
+    name: "joined",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  
 ] as const;
