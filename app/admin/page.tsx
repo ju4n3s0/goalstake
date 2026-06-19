@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, Trophy } from "lucide-react";
 import {
@@ -77,10 +77,12 @@ export default function AdminPage() {
               </label>
               <input
                 value={challengeId}
-                onChange={(e) => setChallengeId(e.target.value)}
+                onChange={(e) => {
+                    setChallengeId((e.target as HTMLInputElement).value);
+                }}
                 placeholder="Ej: 1"
                 className="w-full rounded-2xl border border-border bg-muted/30 px-5 py-4 text-lg font-medium outline-none focus:border-primary"
-              />
+                />
             </div>
 
             <div>
@@ -89,10 +91,10 @@ export default function AdminPage() {
               </label>
               <input
                 value={winner}
-                onChange={(e) => setWinner(e.target.value)}
-                placeholder="0x..."
-                className="w-full rounded-2xl border border-border bg-muted/30 px-5 py-4 text-lg font-medium outline-none focus:border-primary"
-              />
+                onChange={(e) => {
+                    setWinner((e.target as HTMLInputElement).value);
+                }}
+                />
             </div>
 
             <button

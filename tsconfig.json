@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "lib": [
-      "es2023"
+      "es2023","dom", "dom.iterable", "esnext"
     ],
     "module": "esnext",
     "target": "es2023",
@@ -34,6 +34,12 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    ".next",
+    "dist",
+    "scripts",
+    "ignition",
+    "artifacts",
+    "cache"
   ]
 }
