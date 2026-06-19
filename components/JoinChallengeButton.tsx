@@ -45,12 +45,12 @@ export function JoinChallengeButton() {
 
     function handleJoin() {
         if (!isConnected || !address) {
-            alert("Primero conecta tu wallet");
+            console.log("Primero conecta tu wallet");
             return;
         }
       
         if (hasJoined) {
-            alert("Ya estás participando en este reto");
+            console.log("Ya estás participando en este reto");
             return;
         }
       

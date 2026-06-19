@@ -19,7 +19,7 @@ export function SelectWinnerButton() {
 
   function handleSelectWinner() {
     if (!isConnected || !address) {
-      alert("Primero conecta tu wallet");
+      console.log("Primero conecta tu wallet");
       return;
     }
 

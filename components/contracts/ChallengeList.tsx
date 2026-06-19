@@ -60,12 +60,12 @@ function ChallengeItem({ id }: { id: bigint }) {
 
   function handleJoin() {
     if (!isConnected || !address) {
-      alert("Primero conecta tu wallet");
+      console.log("Primero conecta tu wallet");
       return;
     }
 
     if (hasJoined) {
-      alert("Ya estás participando");
+      console.log("Ya estás participando");
       return;
     }
 
@@ -82,12 +82,12 @@ function ChallengeItem({ id }: { id: bigint }) {
 
   function handleClaimPrize() {
     if (!isConnected || !address) {
-      alert("Primero conecta tu wallet");
+      console.log("Primero conecta tu wallet");
       return;
     }
 
     if (!isWinner) {
-      alert("Solo el ganador puede reclamar el premio");
+      console.log("Solo el ganador puede reclamar el premio");
       return;
     }
 

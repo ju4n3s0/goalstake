@@ -26,12 +26,12 @@ export default function CreateChallengePage() {
     e.preventDefault();
 
     if (!isConnected || !address) {
-      alert("Primero conecta tu wallet");
+      console.log("Primero conecta tu wallet");
       return;
     }
 
     if (!title || !description || !entryFee) {
-      alert("Completa título, descripción y entrada");
+      console.log("Completa título, descripción y entrada");
       return;
     }
 
