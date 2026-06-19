@@ -17,7 +17,6 @@ import { celoSepolia } from "../../lib/wagmi";
 export default function AdminPage() {
   const [challengeId, setChallengeId] = useState("1");
   const [winner, setWinner] = useState("");
-
   const { address, isConnected } = useAccount();
 
   const { data: hash, writeContract, isPending, error } = useWriteContract();
