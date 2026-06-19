@@ -39,8 +39,9 @@ export function JoinChallengeButton() {
     const { isLoading: isConfirming, isSuccess } =
         useWaitForTransactionReceipt({ hash });
 
-    const entryFee = challenge ? (challenge as any)[2] : 0n;
     const title = challenge ? (challenge as any)[1] : "";
+    const description = challenge ? (challenge as any)[2] : "";
+    const entryFee = challenge ? (challenge as any)[3] : 0n;
 
     function handleJoin() {
         if (!isConnected || !address) {

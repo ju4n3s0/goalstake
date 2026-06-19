@@ -6,4 +6,4 @@ const { viem } = await network.connect({
 
 const challengeEscrow = await viem.deployContract("ChallengeEscrow");
 
-console.log("ChallengeEscrow deployed to:", challengeEscrow.address);
+console.log("ChallengeEscrow V2 deployed to:", challengeEscrow.address);

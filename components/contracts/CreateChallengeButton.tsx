@@ -15,17 +15,10 @@ import {
 export function CreateChallengeButton() {
   const { address, isConnected } = useAccount();
 
-  const {
-    data: hash,
-    writeContract,
-    isPending,
-    error,
-  } = useWriteContract();
+  const { data: hash, writeContract, isPending, error } = useWriteContract();
 
   const { isLoading: isConfirming, isSuccess } =
-    useWaitForTransactionReceipt({
-      hash,
-    });
+    useWaitForTransactionReceipt({ hash });
 
   function handleCreateChallenge() {
     if (!isConnected || !address) {
@@ -37,7 +30,11 @@ export function CreateChallengeButton() {
       address: CHALLENGE_ESCROW_ADDRESS,
       abi: CHALLENGE_ESCROW_ABI,
       functionName: "createChallenge",
-      args: ["Reto de prueba", parseEther("0.01")],
+      args: [
+        "Running Challenge",
+        "Gana quien más kilómetros corra esta semana.",
+        parseEther("0.01"),
+      ],
       account: address,
       chain: celoSepolia,
     });
@@ -59,11 +56,7 @@ export function CreateChallengeButton() {
           : "Crear reto de prueba"}
       </button>
 
-      {hash && (
-        <p className="mt-3 break-all text-xs text-gray-500">
-          Tx: {hash}
-        </p>
-      )}
+      {hash && <p className="mt-3 break-all text-xs text-gray-500">Tx: {hash}</p>}
 
       {isSuccess && (
         <p className="mt-3 text-sm font-semibold text-green-600">
@@ -71,15 +64,7 @@ export function CreateChallengeButton() {
         </p>
       )}
 
-      {error && (
-        <p className="mt-3 text-sm text-red-600">
-          Error: {error.message}
-        </p>
-      )}
+      {error && <p className="mt-3 text-sm text-red-600">Error: {error.message}</p>}
     </div>
   );
-}
-
-function alert(arg0: string) {
-    throw new Error("Function not implemented.");
 }
